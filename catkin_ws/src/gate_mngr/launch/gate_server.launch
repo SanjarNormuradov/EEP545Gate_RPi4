@@ -1,0 +1,9 @@
+<launch>
+    <!-- Some args -->
+    <arg name="tof_pub_rate" default="30" />
+
+    <node pkg="gate_mngr" type="gate_server.py" name="gate_server" output="screen">
+        <param name="tof_pub_rate" type="int" value="$(arg tof_pub_rate)" />
+    </node>
+
+</launch>

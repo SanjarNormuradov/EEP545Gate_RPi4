@@ -1,0 +1,9 @@
+<launch>
+    <!-- Some args -->
+    <arg name="gate_command" default="open" />
+
+    <node pkg="gate_mngr" type="gate_client.py" name="gate_client" output="screen">
+        <param name="gate_command" type="string" value="$(arg gate_command)" />
+    </node>
+
+</launch>
