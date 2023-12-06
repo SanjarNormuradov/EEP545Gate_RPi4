@@ -1,9 +1,36 @@
 <launch>
-    <!-- Some args -->
-    <arg name="tof_pub_rate" default="30" />
+    <!-- Servo Pin -->
+    <arg name="SERVO" default="4" />
+    <!-- Buzzer Pin -->
+    <arg name="BUZZER" default="5" />
+    <!-- Buzzer Pin -->
+    <arg name="DIST_ECHO" default="17" />
+    <arg name="DIST_TRIG" default="22" />
+    <!-- LCD Screen Pins -->
+    <arg name="LCD_RS" default="19" />
+    <arg name="LCD_E"  default="13" />
+    <arg name="LCD_D4" default="18" />
+    <arg name="LCD_D5" default="23" />
+    <arg name="LCD_D6" default="24" />
+    <arg name="LCD_D7" default="25" />
+    <arg name="LCD_BCKGRD_R" default="6" />
+    <arg name="LCD_BCKGRD_G" default="20" />
+    <arg name="LCD_BCKGRD_B" default="21" />
 
     <node pkg="gate_mngr" type="gate_server.py" name="gate_server" output="screen">
-        <param name="tof_pub_rate" type="int" value="$(arg tof_pub_rate)" />
+        <param name="SERVO"        type="int" value="$(arg SERVO)" />
+        <param name="BUZZER"       type="int" value="$(arg BUZZER)" />
+        <param name="DIST_ECHO"    type="int" value="$(arg DIST_ECHO)" />
+        <param name="DIST_TRIG"    type="int" value="$(arg DIST_TRIG)" />
+        <param name="LCD_RS"       type="int" value="$(arg LCD_RS)" />
+        <param name="LCD_E"        type="int" value="$(arg LCD_E)" />
+        <param name="LCD_D4"       type="int" value="$(arg LCD_D4)" />
+        <param name="LCD_D5"       type="int" value="$(arg LCD_D5)" />
+        <param name="LCD_D6"       type="int" value="$(arg LCD_D6)" />
+        <param name="LCD_D7"       type="int" value="$(arg LCD_D7)" />
+        <param name="LCD_BCKGRD_R" type="int" value="$(arg LCD_BCKGRD_R)" />
+        <param name="LCD_BCKGRD_G" type="int" value="$(arg LCD_BCKGRD_G)" />
+        <param name="LCD_BCKGRD_B" type="int" value="$(arg LCD_BCKGRD_B)" />
     </node>
 
 </launch>

@@ -162,6 +162,7 @@ ${catkin_INCLUDE_DIRS}
 catkin_install_python(PROGRAMS
   scripts/gate_server.py
   scripts/gate_client.py
+  scripts/lcd1602.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
